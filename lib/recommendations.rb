@@ -3,15 +3,15 @@ def approve_recommendation(r)
 end
 
 def get_random_recommendation
-  Recommendation.approved[(rand * Recommendation.approved.length).floor]
+  GetRandomRecommendation.call()
 end
 
 def get_pending_recommendations
-  Recommendation.pending
+  GetPendingRecommendations.call()
 end
 
 def get_approved_recommendations
-  Recommendation.approved
+  GetApprovedRecommendations.call()
 end
 
 class Recommendation
