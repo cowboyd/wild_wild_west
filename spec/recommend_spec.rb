@@ -31,6 +31,10 @@ describe 'recommendations' do
     AddRecommendation.call :person => 'Lenny Kravitz', :job_title => 'CEO', :company => 'Google', :homepage => 'http://www.google.com', :body => 'Rainwob shittin'
     get_recommendations(:random).first.should be(nil)
   end
-  it 'is an error to try and do a get that is not a valid get-type'
+  it 'is an error to try and do a get that is not a valid get-type' do
+    proc do
+      get_recommendations(:blah)
+    end.should raise_error
+  end
 end
 
