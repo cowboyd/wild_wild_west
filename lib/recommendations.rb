@@ -1,13 +1,5 @@
-def add_recommendation(options)
-  Recommendation.new(options).tap do |r|
-    Recommendation.pending.push(r)
-  end
-end
-
 def approve_recommendation(r)
-  if Recommendation.pending.member?(r)
-    Recommendation.approved.push(Recommendation.pending.delete(r))
-  end
+  ApproveRecommendation.call(r)
 end
 
 def get_random_recommendation
@@ -35,10 +27,10 @@ class Recommendation
   end
 
   def initialize(options)
-    @person = options[:person] or raise 'Person required'
-    @job_title = options[:job_title] or raise 'job_title required'
-    @company = options[:company] or raise 'company required'
-    @homepage = options[:homepage] or raise 'homepage required'
-    @body = options[:body] or raise 'body required'
+    @person = options[:person]
+    @job_title = options[:job_title]
+    @company = options[:company]
+    @homepage = options[:homepage]
+    @body = options[:body]
   end
 end
