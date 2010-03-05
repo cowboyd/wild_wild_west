@@ -2,16 +2,8 @@ def approve_recommendation(r)
   ApproveRecommendation.call(r)
 end
 
-def get_random_recommendation
-  GetRandomRecommendation.call()
-end
-
-def get_pending_recommendations
-  GetPendingRecommendations.call()
-end
-
-def get_approved_recommendations
-  GetApprovedRecommendations.call()
+def get_recommendations(type)
+  GetRecommendations.call(type)
 end
 
 class Recommendation
