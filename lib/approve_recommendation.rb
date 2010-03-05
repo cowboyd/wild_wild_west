@@ -1,5 +1,3 @@
-require 'appkernel'
-
 class ApproveRecommendation < AppKernel::Function
   option :recommendation, :type => Recommendation, :index => 0
 

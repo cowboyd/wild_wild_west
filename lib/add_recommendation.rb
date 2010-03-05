@@ -1,5 +1,3 @@
-require 'appkernel'
-
 class AddRecommendation < AppKernel::Function
   # :person :job_title :company :homepage :body
   option :person, :type => String, :required => true

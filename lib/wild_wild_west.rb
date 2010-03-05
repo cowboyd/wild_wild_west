@@ -1,0 +1,5 @@
+require 'rubygems'
+require 'appkernel'
+require 'recommendations'
+require 'add_recommendation'
+require 'approve_recommendation'

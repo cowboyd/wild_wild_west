@@ -1,9 +1,6 @@
-require 'rubygems'
 require 'spec'
 $: << File.dirname(__FILE__) + '/../lib'
-require 'recommendations'
-require 'add_recommendation'
-require 'approve_recommendation'
+require 'wild_wild_west'
 
 describe 'recommendations' do
   before(:each) do
